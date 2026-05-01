@@ -34,18 +34,14 @@ public class WebConfig implements WebMvcConfigurer {
                 .allowedOrigins(
                         "http://localhost:5500",
                         "http://127.0.0.1:5500",
-                        "http://localhost:63342",  // IntelliJ 내장 서버
+                        "http://localhost:63342",
                         "https://front-backoffice-jeg9017-8364s-projects.vercel.app",
-                        "https://front-backoffice-khaki.vercel.app", // versel 서버
-                        ".allowedHeaders(\"*\")", // 모든 헤더 허용
-                        ".allowCredentials(true);",
-                        "null"// 쿠키/인증 정보 포함 시 필수"
-
+                        "https://front-backoffice-khaki.vercel.app" // 마지막에 쉼표(,) 확인
                 )
-                // OPTIONS 메서드를 명시적으로 허용
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS")
                 .allowedHeaders("*")
-                .allowCredentials(true); // 🔥 핵심
+                .allowCredentials(true)
+                .maxAge(3600); // 브라우저가 CORS 검사 결과를 1시간 동안 캐싱하도록 설정
     }
 
 }
