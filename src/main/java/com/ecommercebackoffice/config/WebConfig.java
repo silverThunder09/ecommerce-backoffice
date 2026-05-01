@@ -35,8 +35,8 @@ public class WebConfig implements WebMvcConfigurer {
                         "http://localhost:5500",
                         "http://127.0.0.1:5500",
                         "http://localhost:63342",  // IntelliJ 내장 서버
-                        "https://front-backoffice-jeg9017-8364s-projects.vercel.app/",
-                        "https://front-backoffice-khaki.vercel.app/", // versel 서버
+                        "https://front-backoffice-jeg9017-8364s-projects.vercel.app",
+                        "https://front-backoffice-khaki.vercel.app", // versel 서버
                         ".allowedHeaders(\"*\")", // 모든 헤더 허용
                         ".allowCredentials(true);",
                         "null"// 쿠키/인증 정보 포함 시 필수"
